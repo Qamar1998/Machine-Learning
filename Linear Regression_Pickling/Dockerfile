@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # run the command
-CMD [ "python3", "./src_code/src_app.py","-path","/linear_model_flask/src_code/linear_regression_model.sav"]
+CMD [ "python3", "./linear_model.py"]
 
 
 
