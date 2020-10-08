@@ -1,10 +1,10 @@
 FROM python:3
 
 # set a directory for the app
-WORKDIR /Machine-Learning
+WORKDIR /Linear Regression_Pickling
 
 # copy all the files to the container
-COPY . /Machine-Learning
+COPY . /Linear Regression_Pickling
 
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
