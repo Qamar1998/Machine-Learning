@@ -1,10 +1,10 @@
 FROM python:3
 
 # set a directory for the app
-WORKDIR /app
+WORKDIR /Machine-Learning
 
 # copy all the files to the container
-COPY . /app
+COPY . /Machine-Learning
 
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
