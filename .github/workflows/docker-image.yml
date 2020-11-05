@@ -22,6 +22,6 @@ jobs:
       id: vars
       run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
     - name: Build the tagged Docker image
-      run: docker tag Linear-Regression_Flask ${{ secrets.DOCKERHUB_USERNAME }}/Linear-Regression_Flask:latest
+      run: docker tag docker-project-1 ${{ secrets.DOCKERHUB_USERNAME }}/docker-project-1:latest
     - name: Push the latest Docker image
-      run: docker push  ${{ secrets.DOCKERHUB_USERNAME }}/Linear-Regression_Flask
+      run: docker push  ${{ secrets.DOCKERHUB_USERNAME }}/docker-project-1
