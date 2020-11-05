@@ -19,8 +19,8 @@ jobs:
     - name: Build the Docker image
       run: docker build -t Linear-Regression_Flask .
     - name: Get the version
-	    id: vars
-	    run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
+      id: vars
+      run: echo ::set-output name=tag::$(echo ${GITHUB_REF:10})
     - name: Build the tagged Docker image
       run: docker tag Linear-Regression_Flask ${{ secrets.DOCKERHUB_USERNAME }}/Linear-Regression_Flask:latest
     - name: Push the latest Docker image
