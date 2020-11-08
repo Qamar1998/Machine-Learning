@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # run the command
-CMD ["python", "Flask.py", "-path", "model.sav"]
+CMD ["python", "Flask.py", "-path", "model.pkl"]
