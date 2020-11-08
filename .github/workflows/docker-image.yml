@@ -14,8 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Login to DockerHub Registry
-      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+    - name: docker login
+      uses: docker/login-action@v2
+      with:
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
     - name: Build the Docker image
       run: docker build -t docker-img .
     - name: Get the version
