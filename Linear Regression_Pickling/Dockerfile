@@ -1,10 +1,10 @@
 FROM python:3
 
 # set a directory for the app
-WORKDIR /Linear Regression_Pickling
+WORKDIR /usr/src/app
 
 # copy all the files to the container
-COPY . /Linear Regression_Pickling
+COPY . .
 
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -13,8 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # run the command
-CMD [ "python3", "./linear_model.py"]
-
-
-
-
+CMD ["python", "Flask.py", "-path", "model.sav"]
